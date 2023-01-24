@@ -1,5 +1,4 @@
-"""
- Reto #4 - PRIMO, FIBONACCI Y PAR [Media]
+"""  Reto #4 - PRIMO, FIBONACCI Y PAR [Media]
  * Escribe un programa que, dado un número, compruebe y muestre si es primo,
  * fibonacci y par.
  * Ejemplos:
@@ -30,25 +29,20 @@ def es_par_impar(num):                     #comprobemos si es par o impar
         return "es par"
     else:
         return "es impar"
-    
+
 def es_fibonacci(num):                      #comprobemos si está en fibonacci
     prev_n = 0
     next_n = 1        
     if prev_n == num or next_n == num:
-        return "y es fibonacci."
+        return "es fibonacci."
     for n in range(num+1):
         actual_n = prev_n + next_n
         prev_n = next_n
         next_n = actual_n
         if actual_n == num:
-            return "y es fibonacci."
-    return "y no es fibonacci."    
-        
+            return "es fibonacci."
+    return "no es fibonacci."    
 #--------------------------------------COMENCEMOS
 que_numero = dame_numero() 			#pedimos número
 
-primo = es_primo(que_numero)                
-par_impar = es_par_impar(que_numero)
-fibo = es_fibonacci(que_numero)
-
-print(que_numero, primo, par_impar, fibo )
+print(que_numero, es_primo(que_numero), es_par_impar(que_numero), "y", es_fibonacci(que_numero))
