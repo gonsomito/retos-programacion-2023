@@ -8,15 +8,15 @@ def starway_to(peldanos):
     if peldanos == 0:                               #nos quedamos en el descansillo
         print("__")
     elif peldanos > 0:                              #positivos: asciende izq a der
-        print((peldanos+1)*" "+"_")
+        print((peldanos+1)*"  "+"_")
         while peldanos>0:
-            print(peldanos*" "+"_|")
+            print(peldanos*"  "+"_|")
             peldanos=peldanos-1
     else:                                           #negativos: desciende izq a der
         aux=-peldanos
         print("_")
         while peldanos < 0:
-            print((peldanos+aux)*" "+"|_")
+            print((peldanos+aux)*"  "+"|_")
             peldanos=peldanos+1
 #-------------------------------------------------- 
 try:
