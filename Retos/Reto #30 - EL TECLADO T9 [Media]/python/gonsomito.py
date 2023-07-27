@@ -21,7 +21,7 @@ def teclado_9(secuencia):
                   "8":"T", "88":"U", "888":"V", "9":"W", "99":"X", "999":"Y", "9999":"Z", "0":" "}
     secuencia=secuencia.split("-")
     traduccion=""
-    print(secuencia)
+
 #reviso cada nuevo bloque. me quedo con el primer valor de cada bloque para que no haya diferencias
     for bloque in secuencia:
         if len(bloque) > 0:
